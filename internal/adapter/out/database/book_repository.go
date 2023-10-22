@@ -19,9 +19,5 @@ func NewBookRepository() IBookRepository {
 }
 
 func (br *BookRepository) Create(bookDomain *domain.BookDomain) (*domain.BookDomain, error) {
-	_, err := br.DB.InsertOne(&BookSchema{ID: "id", Name: ""}, context.TODO())
-	if err != nil {
-		return nil, err
-	}
-	return bookDomain, nil
+	return br.DB.InsertOne(&BookSchema{ID: "id", Name: ""}, context.TODO())
 }
