@@ -5,6 +5,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"sync"
+	"time"
 )
 
 var (
@@ -23,9 +24,12 @@ func NewMongoConnection(cfg *MongoConfig) *MongoConfig {
 
 func (m *MongoConfig) GetMongoClient() *mongo.Client {
 	once.Do(func() {
+		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+		defer cancel()
+
 		clientOptions := options.Client().ApplyURI(m.URI)
 
-		client, err := mongo.Connect(context.Background(), clientOptions)
+		client, err := mongo.Connect(ctx, clientOptions)
 		if err != nil {
 			return
 		}
