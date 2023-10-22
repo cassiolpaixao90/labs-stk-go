@@ -1,8 +1,8 @@
 package services
 
 import (
-	"labs-stk-go-hexagonal/internal/core/domain"
-	"labs-stk-go-hexagonal/internal/core/ports/in"
+	"labs-stk-go/internal/core/domain"
+	"labs-stk-go/internal/core/ports/in"
 )
 
 type BookService struct {
