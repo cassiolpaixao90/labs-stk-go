@@ -1,5 +1,6 @@
 package services
 
+/*
 import (
 	"labs-stk-go-hexagonal/internal/core/domain"
 	"labs-stk-go-hexagonal/internal/core/ports/in"
@@ -19,3 +20,5 @@ func (b *BookService) Create(*domain.BookDomain) error {
 func (b *BookService) GetByID(id int) (*domain.BookDomain, error) {
 	panic("implement me")
 }
+
+*/

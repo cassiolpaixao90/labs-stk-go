@@ -1,5 +1,6 @@
 package in
 
+/*
 import "labs-stk-go-hexagonal/internal/core/domain"
 
 type ICreate interface {
@@ -14,3 +15,5 @@ type IBookServicePort interface {
 	ICreate
 	IGetByID
 }
+
+*/
