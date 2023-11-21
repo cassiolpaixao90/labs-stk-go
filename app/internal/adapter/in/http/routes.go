@@ -14,7 +14,7 @@ func NewHttpRoutes(e *echo.Echo) *Routes {
 }
 
 func (r *Routes) SetupRouter() {
-	r.echo.GET("/books", handlers.NewGetBooksInstance().GetBooks)
+	r.echo.GET("/books", handlers.NewGetBooksInstance().GetAllBooks)
 	r.echo.POST("/books", handlers.NewCreateBookInstance().CreateBook)
 	r.echo.GET("/books/:id", handlers.NewGetBookByIdInstance().GetBookById)
 	r.echo.PUT("/books/:id", handlers.NewUpdateBookByIdInstance().UpdateBookById)

@@ -22,5 +22,5 @@ func (s *HttpServer) Start() {
 	r := NewHttpRoutes(s.echo)
 	r.SetupRouter()
 
-	s.echo.Logger.Fatal(s.echo.Start(":9092"))
+	s.echo.Logger.Fatal(s.echo.Start(":9999"))
 }
