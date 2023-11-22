@@ -2,7 +2,7 @@ package http
 
 import (
 	"github.com/labstack/echo/v4"
-	"labs-stk-go/internal/adapter/in/http/handlers"
+	"labs-stk-go/internal/adapters/in/http/handlers"
 )
 
 type Routes struct {

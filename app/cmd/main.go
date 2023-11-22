@@ -1,7 +1,7 @@
 package main
 
 import (
-	"labs-stk-go/internal/adapter/in/http"
+	"labs-stk-go/internal/adapters/in/http"
 )
 
 func main() {

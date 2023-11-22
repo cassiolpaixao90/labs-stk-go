@@ -4,22 +4,22 @@ import (
 	"context"
 	"encoding/json"
 	"io"
-	"labs-stk-go/internal/adapter/out/http/client/book-service/dtos"
-	"labs-stk-go/internal/adapter/out/http/helpers"
+	"labs-stk-go/internal/adapters/out/http/client/book-service/dtos"
+	"labs-stk-go/internal/adapters/out/http/helpers"
 	"labs-stk-go/internal/application/domain"
 	"labs-stk-go/internal/application/ports/out"
 	"net/http"
 )
 
-type GetAllBooksByIdClient struct {
+type GetAllBooksClient struct {
 	client helpers.HttpClientRequest
 }
 
 func NewGetAllBooksClient() out.GetAllBooksClientPort {
-	return &GetAllBooksByIdClient{}
+	return &GetAllBooksClient{}
 }
 
-func (g *GetAllBooksByIdClient) GetAllBooks(ctx context.Context, id string) (*domain.BookDomain, error) {
+func (g *GetAllBooksClient) GetAllBooks(ctx context.Context, id string) (*domain.BookDomain, error) {
 
 	req, _ := http.NewRequest(http.MethodGet, "url", nil)
 

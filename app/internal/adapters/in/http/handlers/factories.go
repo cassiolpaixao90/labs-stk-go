@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"labs-stk-go/internal/adapter/in/http/handlers/books"
-	book_service "labs-stk-go/internal/adapter/out/http/client/book-service"
+	"labs-stk-go/internal/adapters/in/http/handlers/books"
+	book_service "labs-stk-go/internal/adapters/out/http/client/book-service"
 	"labs-stk-go/internal/application/services"
 )
 
